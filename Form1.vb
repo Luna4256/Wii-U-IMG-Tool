@@ -156,4 +156,8 @@
         statusTxt.Text = "Files converted successfully! The files have been saved here: " + TexDest + "tga_output"
         statusTxt.ForeColor = Color.LightGreen
     End Sub
+
+    Private Sub checkUpdatesBTN_Click(sender As Object, e As EventArgs) Handles checkUpdatesBTN.Click
+        MessageBox.Show("This feature isn't implemented yet, please check in future updates by looking at: https://github.com/Luna4256/Wii-U-IMG-Tool/releases")
+    End Sub
 End Class

@@ -30,10 +30,13 @@ Partial Class Help
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Legal = New System.Windows.Forms.TabPage()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.SrcCode = New System.Windows.Forms.TabPage()
+        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
         Me.TabControl1.SuspendLayout()
         Me.DimensionsPage.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Legal.SuspendLayout()
+        Me.SrcCode.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -41,6 +44,7 @@ Partial Class Help
         Me.TabControl1.Controls.Add(Me.DimensionsPage)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.Legal)
+        Me.TabControl1.Controls.Add(Me.SrcCode)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -122,6 +126,31 @@ Partial Class Help
     "n-profit, we don't make money from this project." & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "This software was created by L" &
     "una4256."
         '
+        'SrcCode
+        '
+        Me.SrcCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.SrcCode.Controls.Add(Me.RichTextBox4)
+        Me.SrcCode.Location = New System.Drawing.Point(4, 22)
+        Me.SrcCode.Name = "SrcCode"
+        Me.SrcCode.Padding = New System.Windows.Forms.Padding(3)
+        Me.SrcCode.Size = New System.Drawing.Size(423, 374)
+        Me.SrcCode.TabIndex = 3
+        Me.SrcCode.Text = "Source code"
+        '
+        'RichTextBox4
+        '
+        Me.RichTextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox4.ForeColor = System.Drawing.Color.White
+        Me.RichTextBox4.Location = New System.Drawing.Point(6, 6)
+        Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.ReadOnly = True
+        Me.RichTextBox4.Size = New System.Drawing.Size(411, 362)
+        Me.RichTextBox4.TabIndex = 3
+        Me.RichTextBox4.Text = "The source code can be found here: https://github.com/Luna4256/Wii-U-IMG-Tool/rel" &
+    "eases"
+        '
         'Help
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,7 +160,9 @@ Partial Class Help
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(471, 463)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(471, 463)
         Me.Name = "Help"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -140,6 +171,7 @@ Partial Class Help
         Me.DimensionsPage.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.Legal.ResumeLayout(False)
+        Me.SrcCode.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -151,4 +183,6 @@ Partial Class Help
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents Legal As TabPage
     Friend WithEvents RichTextBox3 As RichTextBox
+    Friend WithEvents SrcCode As TabPage
+    Friend WithEvents RichTextBox4 As RichTextBox
 End Class

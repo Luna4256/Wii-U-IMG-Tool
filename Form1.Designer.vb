@@ -39,6 +39,7 @@ Partial Class Form1
         Me.helpBtn = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.statusTxt = New System.Windows.Forms.Label()
+        Me.checkUpdatesBTN = New System.Windows.Forms.Button()
         Me.iconTexSection.SuspendLayout()
         CType(Me.iconTexPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bootDrcTexSection.SuspendLayout()
@@ -188,9 +189,9 @@ Partial Class Form1
         Me.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.helpBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.helpBtn.ForeColor = System.Drawing.Color.White
-        Me.helpBtn.Location = New System.Drawing.Point(12, 277)
+        Me.helpBtn.Location = New System.Drawing.Point(12, 276)
         Me.helpBtn.Name = "helpBtn"
-        Me.helpBtn.Size = New System.Drawing.Size(932, 26)
+        Me.helpBtn.Size = New System.Drawing.Size(464, 26)
         Me.helpBtn.TabIndex = 4
         Me.helpBtn.Text = "Help"
         Me.helpBtn.UseVisualStyleBackColor = False
@@ -212,12 +213,27 @@ Partial Class Form1
         Me.statusTxt.TabIndex = 6
         Me.statusTxt.Text = "Files have not been converted yet."
         '
+        'checkUpdatesBTN
+        '
+        Me.checkUpdatesBTN.BackColor = System.Drawing.Color.DimGray
+        Me.checkUpdatesBTN.FlatAppearance.BorderSize = 0
+        Me.checkUpdatesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.checkUpdatesBTN.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.checkUpdatesBTN.ForeColor = System.Drawing.Color.Black
+        Me.checkUpdatesBTN.Location = New System.Drawing.Point(480, 276)
+        Me.checkUpdatesBTN.Name = "checkUpdatesBTN"
+        Me.checkUpdatesBTN.Size = New System.Drawing.Size(464, 26)
+        Me.checkUpdatesBTN.TabIndex = 7
+        Me.checkUpdatesBTN.Text = "Check for updates"
+        Me.checkUpdatesBTN.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(956, 342)
+        Me.Controls.Add(Me.checkUpdatesBTN)
         Me.Controls.Add(Me.statusTxt)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.helpBtn)
@@ -227,7 +243,9 @@ Partial Class Form1
         Me.Controls.Add(Me.iconTexSection)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(972, 381)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(972, 381)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Wii U Image Tool"
@@ -258,4 +276,5 @@ Partial Class Form1
     Friend WithEvents helpBtn As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents statusTxt As Label
+    Friend WithEvents checkUpdatesBTN As Button
 End Class
