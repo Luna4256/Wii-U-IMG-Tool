@@ -40,6 +40,7 @@ Partial Class Form1
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.statusTxt = New System.Windows.Forms.Label()
         Me.checkUpdatesBTN = New System.Windows.Forms.Button()
+        Me.newsBtn = New System.Windows.Forms.Button()
         Me.iconTexSection.SuspendLayout()
         CType(Me.iconTexPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bootDrcTexSection.SuspendLayout()
@@ -191,7 +192,7 @@ Partial Class Form1
         Me.helpBtn.ForeColor = System.Drawing.Color.White
         Me.helpBtn.Location = New System.Drawing.Point(12, 276)
         Me.helpBtn.Name = "helpBtn"
-        Me.helpBtn.Size = New System.Drawing.Size(464, 26)
+        Me.helpBtn.Size = New System.Drawing.Size(243, 26)
         Me.helpBtn.TabIndex = 4
         Me.helpBtn.Text = "Help"
         Me.helpBtn.UseVisualStyleBackColor = False
@@ -215,17 +216,31 @@ Partial Class Form1
         '
         'checkUpdatesBTN
         '
-        Me.checkUpdatesBTN.BackColor = System.Drawing.Color.DimGray
+        Me.checkUpdatesBTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.checkUpdatesBTN.FlatAppearance.BorderSize = 0
         Me.checkUpdatesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.checkUpdatesBTN.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.checkUpdatesBTN.ForeColor = System.Drawing.Color.Black
-        Me.checkUpdatesBTN.Location = New System.Drawing.Point(480, 276)
+        Me.checkUpdatesBTN.ForeColor = System.Drawing.Color.White
+        Me.checkUpdatesBTN.Location = New System.Drawing.Point(261, 276)
         Me.checkUpdatesBTN.Name = "checkUpdatesBTN"
-        Me.checkUpdatesBTN.Size = New System.Drawing.Size(464, 26)
+        Me.checkUpdatesBTN.Size = New System.Drawing.Size(434, 26)
         Me.checkUpdatesBTN.TabIndex = 7
         Me.checkUpdatesBTN.Text = "Check for updates"
         Me.checkUpdatesBTN.UseVisualStyleBackColor = False
+        '
+        'newsBtn
+        '
+        Me.newsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.newsBtn.FlatAppearance.BorderSize = 0
+        Me.newsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.newsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.newsBtn.ForeColor = System.Drawing.Color.White
+        Me.newsBtn.Location = New System.Drawing.Point(701, 276)
+        Me.newsBtn.Name = "newsBtn"
+        Me.newsBtn.Size = New System.Drawing.Size(243, 26)
+        Me.newsBtn.TabIndex = 8
+        Me.newsBtn.Text = "News"
+        Me.newsBtn.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -233,6 +248,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(956, 342)
+        Me.Controls.Add(Me.newsBtn)
         Me.Controls.Add(Me.checkUpdatesBTN)
         Me.Controls.Add(Me.statusTxt)
         Me.Controls.Add(Me.ProgressBar1)
@@ -277,4 +293,5 @@ Partial Class Form1
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents statusTxt As Label
     Friend WithEvents checkUpdatesBTN As Button
+    Friend WithEvents newsBtn As Button
 End Class

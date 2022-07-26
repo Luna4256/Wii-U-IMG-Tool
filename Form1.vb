@@ -50,6 +50,7 @@
         Dim TexDest As String = Application.StartupPath + "\"
 
         ProgressBar1.Value = 0
+        convertBtn.Enabled = False
 
         statusTxt.Text = "Converting..."
         statusTxt.ForeColor = Color.Orange
@@ -74,6 +75,7 @@
             End If
             statusTxt.Text = "There was an error! Make sure all the files are correct."
             statusTxt.ForeColor = Color.LightCoral
+            convertBtn.Enabled = True
             Exit Sub
         End If
 
@@ -92,6 +94,7 @@
             End If
             statusTxt.Text = "There was an error! Make sure all the files are correct."
             statusTxt.ForeColor = Color.LightCoral
+            convertBtn.Enabled = True
             Exit Sub
         End If
 
@@ -110,6 +113,7 @@
             End If
             statusTxt.Text = "There was an error! Make sure all the files are correct."
             statusTxt.ForeColor = Color.LightCoral
+            convertBtn.Enabled = True
             Exit Sub
         End If
 
@@ -155,9 +159,26 @@
 
         statusTxt.Text = "Files converted successfully! The files have been saved here: " + TexDest + "tga_output"
         statusTxt.ForeColor = Color.LightGreen
+        convertBtn.Enabled = True
     End Sub
 
     Private Sub checkUpdatesBTN_Click(sender As Object, e As EventArgs) Handles checkUpdatesBTN.Click
-        MessageBox.Show("This feature isn't implemented yet, please check in future updates by looking at: https://github.com/Luna4256/Wii-U-IMG-Tool/releases")
+        Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://luna4256.fra1.digitaloceanspaces.com/wuit/ver.txt")
+        Dim response As System.Net.HttpWebResponse = request.GetResponse
+
+        Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream)
+
+        Dim newestVersion As String = sr.ReadToEnd
+        Dim currentVersion As String = Application.ProductVersion
+
+        If newestVersion > currentVersion Then
+            MsgBox("A new version of WUIT is available!" & vbCrLf & "Current version: " & currentVersion & vbCrLf & "Newest version: " & newestVersion & vbCrLf & "Download the latest version here: https://github.com/Luna4256/Wii-U-IMG-Tool", MsgBoxStyle.Information, "Update available")
+        Else
+            MsgBox("You are running the latest version of WUIT!", MsgBoxStyle.Information, "No update available")
+        End If
+    End Sub
+
+    Private Sub newsBtn_Click(sender As Object, e As EventArgs) Handles newsBtn.Click
+        News.Show()
     End Sub
 End Class
