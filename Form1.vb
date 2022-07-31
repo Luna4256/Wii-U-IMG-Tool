@@ -28,17 +28,17 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not System.IO.Directory.Exists(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools") Then
-            System.IO.Directory.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools")
+        If Not System.IO.Directory.Exists(My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp") Then
+            System.IO.Directory.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp")
         End If
 
-        System.IO.File.WriteAllBytes(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools\FreeImage.dll", My.Resources.FreeImage)
-        System.IO.File.WriteAllBytes(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools\png2tgacmd.exe", My.Resources.png2tgacmd)
+        System.IO.File.WriteAllBytes(My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp\FreeImage.dll", My.Resources.FreeImage)
+        System.IO.File.WriteAllBytes(My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp\png2tgacmd.exe", My.Resources.png2tgacmd)
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If System.IO.Directory.Exists(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools") = True Then
-            System.IO.Directory.Delete(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools", True)
+        If System.IO.Directory.Exists(My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp") = True Then
+            System.IO.Directory.Delete(My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp", True)
         End If
     End Sub
 
@@ -119,7 +119,7 @@
 
 
         Dim iconTexConvertion As New ProcessStartInfo
-        iconTexConvertion.FileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools\png2tgacmd.exe"
+        iconTexConvertion.FileName = My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp\png2tgacmd.exe"
         iconTexConvertion.Arguments = "-i " + Chr(34) + TexDest + "tga_output\iconTex.png" + Chr(34) + " --width=128 --height=128 --tga-bpp=32 --tga-compression=none"
         iconTexConvertion.WindowStyle = ProcessWindowStyle.Hidden
         Dim iconProcess As Process = Process.Start(iconTexConvertion)
@@ -128,7 +128,7 @@
         ProgressBar1.Value = 50
 
         Dim bootDrcTexConvertion As New ProcessStartInfo
-        bootDrcTexConvertion.FileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools\png2tgacmd.exe"
+        bootDrcTexConvertion.FileName = My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp\png2tgacmd.exe"
         bootDrcTexConvertion.Arguments = "-i " + Chr(34) + TexDest + "tga_output\bootDrcTex.png" + Chr(34) + " --width=854 --height=480 --tga-bpp=24 --tga-compression=none"
         bootDrcTexConvertion.WindowStyle = ProcessWindowStyle.Hidden
         Dim bootDrcProcess As Process = Process.Start(bootDrcTexConvertion)
@@ -137,7 +137,7 @@
         ProgressBar1.Value = 60
 
         Dim bootTvTexConvertion As New ProcessStartInfo
-        bootTvTexConvertion.FileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\TempTools\png2tgacmd.exe"
+        bootTvTexConvertion.FileName = My.Computer.FileSystem.SpecialDirectories.Temp + "\WUIT_Temp\png2tgacmd.exe"
         bootTvTexConvertion.Arguments = "-i " + Chr(34) + TexDest + "tga_output\bootTvTex.png" + Chr(34) + " --width=1280 --height=720 --tga-bpp=24 --tga-compression=none"
         bootTvTexConvertion.WindowStyle = ProcessWindowStyle.Hidden
         Dim bootTvProcess As Process = Process.Start(bootTvTexConvertion)

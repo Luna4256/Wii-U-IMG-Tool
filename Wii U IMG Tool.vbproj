@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>Wii_U_IMG_Tool.My.MyApplication</StartupObject>
     <RootNamespace>Wii_U_IMG_Tool</RootNamespace>
-    <AssemblyName>Wii U IMG Tool</AssemblyName>
+    <AssemblyName>Wii U Image Tool</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
@@ -35,8 +35,8 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>C:\Users\syrek\Desktop\</OutputPath>
-    <DocumentationFile>Wii U IMG Tool.xml</DocumentationFile>
+    <OutputPath>C:\Users\syrek\Pictures\</OutputPath>
+    <DocumentationFile>Wii U Image Tool.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Wii U IMG Tool.xml</DocumentationFile>
+    <DocumentationFile>Wii U Image Tool.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -62,7 +62,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Untitled.ico</ApplicationIcon>
+    <ApplicationIcon>Frame 1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -135,9 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="News.resx">
       <DependentUpon>News.vb</DependentUpon>
@@ -156,6 +156,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Tools\FreeImage.dll" />
+    <None Include="Tools\png2tgacmd.exe" />
+    <Content Include="Frame 1.ico" />
     <Content Include="Untitled.ico" />
   </ItemGroup>
   <ItemGroup>
