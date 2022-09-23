@@ -41,6 +41,9 @@ Partial Class Form1
         Me.statusTxt = New System.Windows.Forms.Label()
         Me.checkUpdatesBTN = New System.Windows.Forms.Button()
         Me.newsBtn = New System.Windows.Forms.Button()
+        Me.iconTexCheck = New System.Windows.Forms.CheckBox()
+        Me.bootDrcTexCheck = New System.Windows.Forms.CheckBox()
+        Me.bootTvTexCheck = New System.Windows.Forms.CheckBox()
         Me.iconTexSection.SuspendLayout()
         CType(Me.iconTexPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bootDrcTexSection.SuspendLayout()
@@ -65,6 +68,7 @@ Partial Class Form1
         '
         'iconTexSection
         '
+        Me.iconTexSection.Controls.Add(Me.iconTexCheck)
         Me.iconTexSection.Controls.Add(Me.iconTexPreview)
         Me.iconTexSection.Controls.Add(Me.iconTexOpen)
         Me.iconTexSection.ForeColor = System.Drawing.Color.White
@@ -91,6 +95,7 @@ Partial Class Form1
         '
         'bootDrcTexSection
         '
+        Me.bootDrcTexSection.Controls.Add(Me.bootDrcTexCheck)
         Me.bootDrcTexSection.Controls.Add(Me.bootDrcTexPreview)
         Me.bootDrcTexSection.Controls.Add(Me.bootDrcTexOpen)
         Me.bootDrcTexSection.ForeColor = System.Drawing.Color.White
@@ -131,6 +136,7 @@ Partial Class Form1
         '
         'bootTvTexSection
         '
+        Me.bootTvTexSection.Controls.Add(Me.bootTvTexCheck)
         Me.bootTvTexSection.Controls.Add(Me.bootTvTexPreview)
         Me.bootTvTexSection.Controls.Add(Me.bootTvTexOpen)
         Me.bootTvTexSection.ForeColor = System.Drawing.Color.White
@@ -188,7 +194,7 @@ Partial Class Form1
         Me.helpBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.helpBtn.FlatAppearance.BorderSize = 0
         Me.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.helpBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.helpBtn.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.helpBtn.ForeColor = System.Drawing.Color.White
         Me.helpBtn.Location = New System.Drawing.Point(12, 276)
         Me.helpBtn.Name = "helpBtn"
@@ -207,19 +213,19 @@ Partial Class Form1
         'statusTxt
         '
         Me.statusTxt.AutoSize = True
+        Me.statusTxt.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.statusTxt.ForeColor = System.Drawing.Color.LightCoral
         Me.statusTxt.Location = New System.Drawing.Point(9, 322)
         Me.statusTxt.Name = "statusTxt"
-        Me.statusTxt.Size = New System.Drawing.Size(171, 13)
+        Me.statusTxt.Size = New System.Drawing.Size(0, 13)
         Me.statusTxt.TabIndex = 6
-        Me.statusTxt.Text = "Files have not been converted yet."
         '
         'checkUpdatesBTN
         '
         Me.checkUpdatesBTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.checkUpdatesBTN.FlatAppearance.BorderSize = 0
         Me.checkUpdatesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.checkUpdatesBTN.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.checkUpdatesBTN.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.checkUpdatesBTN.ForeColor = System.Drawing.Color.White
         Me.checkUpdatesBTN.Location = New System.Drawing.Point(261, 276)
         Me.checkUpdatesBTN.Name = "checkUpdatesBTN"
@@ -233,7 +239,7 @@ Partial Class Form1
         Me.newsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.newsBtn.FlatAppearance.BorderSize = 0
         Me.newsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.newsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.newsBtn.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.newsBtn.ForeColor = System.Drawing.Color.White
         Me.newsBtn.Location = New System.Drawing.Point(701, 276)
         Me.newsBtn.Name = "newsBtn"
@@ -242,11 +248,44 @@ Partial Class Form1
         Me.newsBtn.Text = "News"
         Me.newsBtn.UseVisualStyleBackColor = False
         '
+        'iconTexCheck
+        '
+        Me.iconTexCheck.AutoSize = True
+        Me.iconTexCheck.Checked = True
+        Me.iconTexCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.iconTexCheck.Location = New System.Drawing.Point(11, 98)
+        Me.iconTexCheck.Name = "iconTexCheck"
+        Me.iconTexCheck.Size = New System.Drawing.Size(15, 14)
+        Me.iconTexCheck.TabIndex = 2
+        Me.iconTexCheck.UseVisualStyleBackColor = True
+        '
+        'bootDrcTexCheck
+        '
+        Me.bootDrcTexCheck.AutoSize = True
+        Me.bootDrcTexCheck.Checked = True
+        Me.bootDrcTexCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.bootDrcTexCheck.Location = New System.Drawing.Point(11, 129)
+        Me.bootDrcTexCheck.Name = "bootDrcTexCheck"
+        Me.bootDrcTexCheck.Size = New System.Drawing.Size(15, 14)
+        Me.bootDrcTexCheck.TabIndex = 3
+        Me.bootDrcTexCheck.UseVisualStyleBackColor = True
+        '
+        'bootTvTexCheck
+        '
+        Me.bootTvTexCheck.AutoSize = True
+        Me.bootTvTexCheck.Checked = True
+        Me.bootTvTexCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.bootTvTexCheck.Location = New System.Drawing.Point(11, 175)
+        Me.bootTvTexCheck.Name = "bootTvTexCheck"
+        Me.bootTvTexCheck.Size = New System.Drawing.Size(15, 14)
+        Me.bootTvTexCheck.TabIndex = 4
+        Me.bootTvTexCheck.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(956, 342)
         Me.Controls.Add(Me.newsBtn)
         Me.Controls.Add(Me.checkUpdatesBTN)
@@ -266,10 +305,13 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Wii U Image Tool"
         Me.iconTexSection.ResumeLayout(False)
+        Me.iconTexSection.PerformLayout()
         CType(Me.iconTexPreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bootDrcTexSection.ResumeLayout(False)
+        Me.bootDrcTexSection.PerformLayout()
         CType(Me.bootDrcTexPreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bootTvTexSection.ResumeLayout(False)
+        Me.bootTvTexSection.PerformLayout()
         CType(Me.bootTvTexPreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -294,4 +336,7 @@ Partial Class Form1
     Friend WithEvents statusTxt As Label
     Friend WithEvents checkUpdatesBTN As Button
     Friend WithEvents newsBtn As Button
+    Friend WithEvents iconTexCheck As CheckBox
+    Friend WithEvents bootDrcTexCheck As CheckBox
+    Friend WithEvents bootTvTexCheck As CheckBox
 End Class
